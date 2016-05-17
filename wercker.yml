@@ -1,0 +1,29 @@
+box: roby/angular-cli:0.1
+# Defining the dev pipeline
+dev:
+    steps:
+        - npm-install
+        - script:
+                 name: angular-cli build
+                 code: |
+                     ng build
+# Defining the build pipeline, initially identical to dev
+build:
+    steps:
+        - npm-install
+        - script:
+                 name: angular-cli build
+                 code: |
+                     ng build
+# Sync the Dist folder with the S3 bucket
+# deploy:
+#         steps:
+#                 - s3sync:
+#                         key-id: $AWS_ACCESS_KEY_ID
+#                         key-secret: $AWS_SECRET_KEY
+#                         bucket-url: $BUCKET
+#                         source-dir: dist/
+                # - script:
+                #         name: casper navigate
+                #         code: |
+                #             casperjs caspertest.js

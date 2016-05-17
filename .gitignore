@@ -26,3 +26,8 @@ testem.log
 
 #System Files
 .DS_Store
+
+#Wercker
+_builds/
+_cache/
+_steps/ 
