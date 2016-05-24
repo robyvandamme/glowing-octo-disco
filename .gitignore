@@ -30,4 +30,6 @@ testem.log
 #Wercker
 _builds/
 _cache/
-_steps/ 
+_steps/
+_projects/
+ 

@@ -1,4 +1,4 @@
-box: roby/angular-cli:0.1
+box: roby/angular-cli
 # Defining the dev pipeline
 dev:
     steps:
